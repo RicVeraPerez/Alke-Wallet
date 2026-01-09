@@ -1,0 +1,25 @@
+
+.navbar .nav-link {
+position: relative;
+text-decoration: none;
+}
+
+.navbar .nav-link::after {
+content: "";
+position: absolute;
+left: 0;
+bottom: 0;
+width: 0;
+height: 2px;
+background-color: currentColor;
+transition: width 0.3s ease;
+}
+
+.navbar .nav-link:hover::after {
+width: 100%;
+}
+
+#navbar-avatar-icon {
+    width: 3rem;
+    height: 3rem;
+}
