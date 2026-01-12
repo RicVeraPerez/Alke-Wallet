@@ -1,3 +1,9 @@
+.navbar {
+    height: 10vh;
+    width: 100vw;
+    z-index: 1030;
+}
+
 
 .navbar .nav-link {
 position: relative;

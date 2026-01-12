@@ -1,0 +1,14 @@
+.main-container-lg {
+    flex: 1;
+    width: 100vw;
+    min-height: 100vh   ;
+    padding: 10vh 0 0 20vw;
+    background-color: red;
+}
+
+.main-container-md-sm {
+    width: 100vw;
+    min-height: 90vh;
+    padding-top: 10vh;
+    background-color: red;
+}
