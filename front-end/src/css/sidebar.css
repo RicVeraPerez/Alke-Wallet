@@ -1,5 +1,5 @@
 .sidebar {
-    min-height: 100vh;
+    flex-shrink: 0;
     width: 20vw;
     z-index: 1020;
 }  
@@ -26,5 +26,21 @@ width: 100%;
 
 #sidebar-toggler {
     border-radius: 0 50% 50% 0;
-    z-index: 1040;
+    z-index: 1055;
+    max-width: 3rem;
+    max-height: 3rem;
+    min-height: 3rem;
+    min-width: 3rem;
+    position: fixed;
+    top: 20vh;
+    left: 0;
 }
+
+#sidebar-toggler {
+    transition: opacity 0.2s ease;
+}
+
+#sidebar-toggler:hover {
+    opacity: 0.7;
+}
+

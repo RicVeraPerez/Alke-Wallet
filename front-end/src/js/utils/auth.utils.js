@@ -1,5 +1,17 @@
 
 
+
+
+/* Proteccion de rutas */
+
+export function protectRoute() {
+    const loggedInUser = localStorage.getItem("loggedInUser");
+    if (!loggedInUser) {
+        window.location.href = "login.html";
+    }
+}
+
+
 /* checkea si las contraseñas del registro son iguales todo: checkeo en tiempo real */
 
 export function checkPasswordConfirm(registerPassword, registerConfirmPassword) {
