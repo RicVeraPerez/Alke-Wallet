@@ -1,0 +1,28 @@
+1 - balance.html 
+
+    - Ver tu saldo 
+    - Ver tu tarjeta que marques como principal // added ft
+    - Formulario de presupuestos // added ft
+
+
+2 - deposit.html
+
+    - Formulario deposito 
+    - Ver tu saldo o tarjeta
+    - Ver tus ultimos movimientos o contactos 
+
+
+3 - sendmoney.html 
+
+    - Formulario transferencia 
+    - Ver tu saldo o tarjeta 
+    - Utimos movimientos o contactos
+
+
+4 - menu.html
+
+    - Ver tu saldo 
+    - Ver tu tarjeta 
+    - Ver tus ultimos movimientos o contactos
+
+

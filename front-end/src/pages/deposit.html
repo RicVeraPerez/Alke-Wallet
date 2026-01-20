@@ -11,11 +11,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/css/cards.css">
     <link rel="stylesheet" href="/src/css/sidebar.css">
     <link rel="stylesheet" href="/src/css/navbar.css">
     <link rel="stylesheet" href="/src/css/global.css">
     <link rel="stylesheet" href="/src/css/main.css">
+
 
 </head>
 
@@ -129,7 +129,7 @@
                     </span>
                 </a>
                 <a class="nav-link px-5 py-3 text-white d-flex align-items-center justify-content-start gap-2"
-                    href="balance.html">
+                    href="AccountBalance.html">
 
                     <span class="material-symbols-outlined">
                         account_balance
@@ -176,7 +176,7 @@
 
                 </a>
                 <a class="nav-link px-5 py-3 text-white d-flex align-items-center justify-content-start gap-2"
-                    href="deposit.html">
+                    href="Deposit.html">
 
                     <span class="material-symbols-outlined">
                         payment_arrow_down
@@ -199,7 +199,7 @@
 
                 </a>
                 <a class="nav-link px-5 py-3 text-white d-flex align-items-center justify-content-start gap-2"
-                    href="contacts.html">
+                    href="contacs.html">
 
                     <span class="material-symbols-outlined">
                         groups
@@ -328,117 +328,13 @@
             <main class="flex-grow-1">
 
                 <!-- Contenedor Main Escritorio o lg-->
-                <div class="main-container-lg container-fluid d-none d-lg-block h-100 px-5 py-5">
-
-                    <div class="row g-2 h-100">
-
-                        <div class="col-6 d-flex flex-column h-100 gap-3">
-
-                            <!-- Carta Saldo -->
-
-                            <div class="card border-secondary flex-fill">
-
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="material-symbols-outlined card-icon">
-                                            account_balance
-                                        </span>
-                                        <span class="fw-semibold fs-3">Saldo disponible</span>
-                                    </div>
-
-                                    <button class="btn btn-sm btn-outline-secondary" id="show-balance-btn">
-                                        Mostrar
-                                    </button>
-                                </div>
-
-                                <div class="card-body d-flex flex-column justify-content-center">
-                                    <h2 class="fw-bold text-center" id="user-balance">
-                                
-                                    </h2>
-                                    <p class="text-center text-muted mb-0">
-                                        CLP
-                                    </p>
-                                </div>
-
-                            </div>
-
-
-                            <!-- Carta de la tarjeta -->
-
-                            <div class="card border-secondary flex-fill">
-
-                                <div class="card-header d-flex justify-content-between align-items-center">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="material-symbols-outlined card-icon">
-                                            credit_card
-                                        </span>
-                                        <span class="fw-semibold fs-3">Mi Tarjeta</span>
-                                    </div>
-
-                                    <button class="btn btn-sm btn-outline-secondary" id="view-card-details">
-                                        Ver detalles
-                                    </button>
-                                </div>
-
-                                <div class="card-body d-flex align-items-center justify-content-center">
-
-                                    <div class="bank-card w-100 p-4 rounded">
-                                        <div class="d-flex justify-content-between mb-4">
-                                            <span class="fw-semibold">Alke Wallet</span>
-                                            <span class="fw-semibold">VISA</span>
-                                        </div>
-
-                                        <div class="card-number mb-4 fs-5">
-                                            **** **** **** 1234
-                                        </div>
-
-                                        <div class="d-flex justify-content-between">
-                                            <div>
-                                                <small class="text-muted">Titular</small>
-                                                <div class="fw-semibold">Nombre Apellido</div>
-                                            </div>
-
-                                            <div class="text-end">
-                                                <small class="text-muted">Expira</small>
-                                                <div class="fw-semibold">12/28</div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Carta de separacion de presupuestos -->
-
-                        <div class="col-6 m-0 p-0 d-flex flex-column h-100">
-
-                            <div class="card-header border-secondary flex-fill mb-3 p-3 d-flex flex-column">
-                                <div class="d-flex justify-content-between align-items-center mb-3">
-                                    <div class="d-flex align-items-center gap-2">
-                                        <span class="material-symbols-outlined">
-                                            money_range
-                                        </span>
-                                        <span class="fw-semibold fs-3" id="">Hacer presupuestos</span>
-                                    </div>
-                                </div>
-                            </div>
-
-
-                            <div class="card-body d-flex align-items-start justify-content-center">
-                            
-                                <form class="budget-form">
-
-                                </form>
-
-                            </div>
-
-                        </div>
-                    </div>
+                <div class="main-container-lg container-fluid d-none d-lg-block h-100 "
+                    style="background-color: ghostwhite;">
                 </div>
 
-                <!-- Contenedor Main Mobile o sm-md-->
-                <div class="main-container-sm-md container-fluid d-lg-none">
-
+                <!-- Contenedor Main Mobile o sm-md-->                
+                <div class="main-container-sm-md container-fluid d-lg-none"
+                    style="background-color: aqua; height: 200px;">
                 </div>
             </main>
         </div>
@@ -582,33 +478,30 @@
 
 
     <!-- Script para q el toggler de la sidebar se esconda pq en css es una flojera y no funciono dios mio -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            const sidebar = document.getElementById("mobileSidebar");
-            const sidebarToggler = document.getElementById("sidebar-toggler");
-            const navbarCollapse = document.getElementById("navbarNav");
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const sidebar = document.getElementById("mobileSidebar");
+    const sidebarToggler = document.getElementById("sidebar-toggler");
+    const navbarCollapse = document.getElementById("navbarNav");
 
-            sidebar.addEventListener("show.bs.offcanvas", () => {
-                sidebarToggler.style.display = "none";
-            });
+    sidebar.addEventListener("show.bs.offcanvas", () => {
+        sidebarToggler.style.display = "none";
+    });
 
-            sidebar.addEventListener("hidden.bs.offcanvas", () => {
-                sidebarToggler.style.display = "block";
-            });
+    sidebar.addEventListener("hidden.bs.offcanvas", () => {
+        sidebarToggler.style.display = "block";
+    });
 
-            navbarCollapse.addEventListener("show.bs.collapse", () => {
-                sidebarToggler.style.display = "none";
-            });
+    navbarCollapse.addEventListener("show.bs.collapse", () => {
+        sidebarToggler.style.display = "none";
+    });
 
-            navbarCollapse.addEventListener("hidden.bs.collapse", () => {
-                sidebarToggler.style.display = "block";
-            });
-        });
-    </script>
+    navbarCollapse.addEventListener("hidden.bs.collapse", () => {
+        sidebarToggler.style.display = "block";
+    });
+});
+</script>
 
-
-    <script src="/src/js/controllers/balance.controllers.js" type="module">
-    </script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"

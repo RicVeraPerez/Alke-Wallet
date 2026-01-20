@@ -1,4 +1,3 @@
-
 const offcanvas = document.getElementById('mobileSidebar');
 const toggler = document.querySelector('.sidebar-toggler');
 

@@ -1,5 +1,4 @@
-
-export function formatContactName(contact) {
+window.formatContactName = function (contact) {
     if (!contact || typeof contact !== 'object') {
         return '';
     }
@@ -9,21 +8,24 @@ export function formatContactName(contact) {
 
 }
 
-export function getContacts() {
+window.getContacts = function () {
     const contacts = localStorage.getItem("userContacts");
     return contacts ? JSON.parse(contacts) : [];
 }
 
-export function saveContact(contactData) {
+
+
+window.saveContact = function (contactData) {
     const contacts = getContacts();
     contacts.push(contactData);
     localStorage.setItem("userContacts", JSON.stringify(contacts));
 }
 
-export function deleteContact(contactEmail) {
+window.deleteContact = function (contactEmail) {
     let contacts = getContacts();
     contacts = contacts.filter(contact => contact.email !== contactEmail);
     localStorage.setItem("userContacts", JSON.stringify(contacts));
 } 
+
 
 
