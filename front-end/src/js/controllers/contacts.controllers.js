@@ -1,6 +1,6 @@
 window.renderContactTable = function () {
     const contacts = getContacts();
-    const container = $("#contacts-table-body");
+    const container = $(".contacts-table-body");
 
     container.empty();
 
@@ -73,6 +73,7 @@ $(document).ready(function () {
         saveContact(contactData);
         this.reset();
         renderContactTable();
+        alert("Contacto Añadido Exitosamente!")
     });
     renderContactTable();
 });

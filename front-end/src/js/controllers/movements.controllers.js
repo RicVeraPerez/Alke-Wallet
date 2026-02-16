@@ -6,7 +6,7 @@ $(document).ready(function () {
 
 window.renderMovements = function () {
     const movements = getMovements();
-    const container = $("#movements-table-body");
+    const container = $(".movements-table-body");
 
     container.empty();
 

@@ -1,29 +1,33 @@
+let isBalanceVisible = false;
 
+window.renderBalance = function () {
+    const balanceElements = document.querySelectorAll(".user-balance");
+    const balance = getBalance();
 
-document.addEventListener('DOMContentLoaded', () => {
-    
-    const balanceElement = document.getElementById('user-balance');
-    const showBalanceBtn = document.getElementById('show-balance-btn');
+    balanceElements.forEach(el => {
+        el.textContent = isBalanceVisible
+            ? balance.toLocaleString("es-CL")
+            : "••••••";
+    });
+};
 
-    let isBalanceVisible = false; 
+function toggleBalanceVisibility() {
+    isBalanceVisible = !isBalanceVisible;
 
+    const buttons = document.querySelectorAll(".show-balance-btn");
+    buttons.forEach(btn => {
+        btn.textContent = isBalanceVisible ? "Ocultar" : "Mostrar";
+    });
 
-    const renderBalance = () => { 
-        if (isBalanceVisible) {
-            const balance = getBalance();
-            balanceElement.textContent = `$ ${formatBalance(balance)}`;
-            showBalanceBtn.textContent = 'Ocultar Saldo';
-        } else {
-            balanceElement.textContent = '****';
-            showBalanceBtn.textContent = 'Mostrar Saldo';
-        }
-    };
+    renderBalance();
+}
 
-    showBalanceBtn.addEventListener('click', () => {
-        isBalanceVisible = !isBalanceVisible;
-        renderBalance();
+document.addEventListener("DOMContentLoaded", () => {
+    const buttons = document.querySelectorAll(".show-balance-btn");
+
+    buttons.forEach(btn => {
+        btn.addEventListener("click", toggleBalanceVisibility);
     });
 
     renderBalance();
 });
-

@@ -17,7 +17,7 @@ window.getContacts = function () {
 
 window.saveContact = function (contactData) {
     const contacts = getContacts();
-    contacts.push(contactData);
+    contacts.unshift(contactData);
     localStorage.setItem("userContacts", JSON.stringify(contacts));
 }
 

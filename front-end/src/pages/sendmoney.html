@@ -11,11 +11,11 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet" />
-    <link rel="stylesheet" href="/src/css/sidebar.css">
-    <link rel="stylesheet" href="/src/css/navbar.css">
-    <link rel="stylesheet" href="/src/css/global.css">
-    <link rel="stylesheet" href="/src/css/main.css">
 
+    <link rel="stylesheet" href="../css/global.css" />
+    <link rel="stylesheet" href="../css/sidebar.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/main.css" />
 
 </head>
 
@@ -51,7 +51,7 @@
                             <li><a class="dropdown-item" href="profile.html">Mi perfil</a></li>
                             <li><a class="dropdown-item" href="menu.html">Cerrar Sesion</a></li>
                         </ul>
-                        <img src="/public/assets/avatar.png" class="img-fluid rounded-circle border-1 mx-3"
+                        <img src="/front-end/public/assets/avatar.png" class="img-fluid rounded-circle border-1 mx-3"
                             id="navbar-avatar-icon" />
                     </button>
                 </div>
@@ -71,7 +71,8 @@
                 <div class="d-flex align-items-center ms-auto" id="mobile-controls">
 
                     <a href="profile.html" id="mobile-avatar">
-                        <img src="/public/assets/avatar.png" class="rounded-circle me-2" id="navbar-avatar-icon">
+                        <img src="/front-end/public/assets/avatar.png" class="rounded-circle me-2"
+                            id="navbar-avatar-icon">
                     </a>
 
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -176,7 +177,7 @@
 
                 </a>
                 <a class="nav-link px-5 py-3 text-white d-flex align-items-center justify-content-start gap-2"
-                    href="Deposit.html">
+                    href="deposit.html">
 
                     <span class="material-symbols-outlined">
                         payment_arrow_down
@@ -199,7 +200,7 @@
 
                 </a>
                 <a class="nav-link px-5 py-3 text-white d-flex align-items-center justify-content-start gap-2"
-                    href="contacs.html">
+                    href="contacts.html">
 
                     <span class="material-symbols-outlined">
                         groups
@@ -270,7 +271,7 @@
                         Inicio
                     </a>
 
-                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="AccountBalance.html">
+                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="balance.html">
                         <span class="material-symbols-outlined">account_balance</span>
                         Saldo
                     </a>
@@ -290,7 +291,7 @@
                         Ahorros
                     </a>
 
-                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="Deposit.html">
+                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="deposit.html">
                         <span class="material-symbols-outlined">payment_arrow_down</span>
                         Depositar
                     </a>
@@ -300,7 +301,7 @@
                         Tarjetas
                     </a>
 
-                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="contacs.html">
+                    <a class="nav-link px-4 py-3 text-white d-flex align-items-center gap-2" href="contacts.html">
                         <span class="material-symbols-outlined">groups</span>
                         Contactos
                     </a>
@@ -319,7 +320,6 @@
                         <span class="material-symbols-outlined">finance_mode</span>
                         Inversiones
                     </a>
-
                 </nav>
             </div>
         </div>
@@ -328,14 +328,116 @@
             <main class="flex-grow-1">
 
                 <!-- Contenedor Main Escritorio o lg-->
-                <div class="main-container-lg container-fluid d-none d-lg-block h-100 "
-                    style="background-color: ghostwhite;">
+                <div class="main-container-lg container-fluid d-none d-lg-block h-100 ">
+
+                    <div class="row h-100">
+                        <div class="col-6 d-flex flex-column h-100 gap-3">
+
+                            <div class="card border-secondary flex-fill my-5 mx-2">
+                                <div class="card-header d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined card-icon">
+                                        send_money
+                                    </span>
+                                    <span class="fw-semibold fs-5">Transferir dinero</span>
+                                </div>
+
+                                <div class="card-body">
+                                    <form id="send-money-form" class="d-flex flex-column gap-3">
+
+                                        <div>
+                                            <label class="form-label">Monto a transferir</label>
+                                            <input type="number" class="form-control" id="transfer-amount" min="1"
+                                                required>
+                                        </div>
+
+                                        <div>
+                                            <label class="form-label">RUT destinatario</label>
+                                            <input type="text" class="form-control" id="transfer-rut-receiver" required>
+                                        </div>
+
+                                        <div>
+                                            <label class="form-label">Descripción</label>
+                                            <input type="text" class="form-control" id="transfer-description"
+                                                placeholder="Opcional">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-danger w-100">
+                                            Transferir
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="col-6 d-flex flex-column  h-100 gap-3">
+                            <div class="card border-secondary flex-fill my-5 mx-2">
+                                <div class="card-header d-flex align-items-center">
+                                    <div class="d-flex align-items-center gap-2 w-100">
+                                        <span class="material-symbols-outlined card-icon">
+                                            swap_horiz
+                                        </span>
+                                        <span class="fw-semibold fs-3">
+                                            Movimientos
+                                        </span>
+                                    </div>
+                                </div>
+                                <div class="card-body d-flex flex-column">
+                                    <div class="movements-table-body">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
 
-                <!-- Contenedor Main Mobile o sm-md-->                
-                <div class="main-container-sm-md container-fluid d-lg-none"
-                    style="background-color: aqua; height: 200px;">
-                </div>
+                <!-- Contenedor Main Mobile o sm-md-->
+                <div class="main-container-sm-md container-fluid d-lg-none h-100">
+
+                    <div class="row h-100">
+                        <div class="col-12 d-flex flex-column h-100 gap-3">
+
+                            <div class="card border-secondary flex-fill my-5 mx-2">
+                                <div class="card-header d-flex align-items-center gap-2">
+                                    <span class="material-symbols-outlined card-icon">
+                                        send_money
+                                    </span>
+                                    <span class="fw-semibold fs-5">Transferir dinero</span>
+                                </div>
+
+                                <div class="card-body">
+                                    <form id="send-money-form" class="d-flex flex-column gap-3">
+
+                                        <div>
+                                            <label class="form-label">Monto a transferir</label>
+                                            <input type="number" class="form-control" id="transfer-amount" min="1"
+                                                required>
+                                        </div>
+
+                                        <div>
+                                            <label class="form-label">RUT destinatario</label>
+                                            <input type="text" class="form-control" id="transfer-rut-receiver" required>
+                                        </div>
+
+                                        <div>
+                                            <label class="form-label">Descripción</label>
+                                            <input type="text" class="form-control" id="transfer-description"
+                                                placeholder="Opcional">
+                                        </div>
+
+                                        <button type="submit" class="btn btn-danger w-100">
+                                            Transferir
+                                        </button>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
             </main>
         </div>
     </div>
@@ -478,30 +580,31 @@
 
 
     <!-- Script para q el toggler de la sidebar se esconda pq en css es una flojera y no funciono dios mio -->
-<script>
-document.addEventListener("DOMContentLoaded", () => {
-    const sidebar = document.getElementById("mobileSidebar");
-    const sidebarToggler = document.getElementById("sidebar-toggler");
-    const navbarCollapse = document.getElementById("navbarNav");
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const sidebar = document.getElementById("mobileSidebar");
+            const sidebarToggler = document.getElementById("sidebar-toggler");
+            const navbarCollapse = document.getElementById("navbarNav");
 
-    sidebar.addEventListener("show.bs.offcanvas", () => {
-        sidebarToggler.style.display = "none";
-    });
+            sidebar.addEventListener("show.bs.offcanvas", () => {
+                sidebarToggler.style.display = "none";
+            });
 
-    sidebar.addEventListener("hidden.bs.offcanvas", () => {
-        sidebarToggler.style.display = "block";
-    });
+            sidebar.addEventListener("hidden.bs.offcanvas", () => {
+                sidebarToggler.style.display = "block";
+            });
 
-    navbarCollapse.addEventListener("show.bs.collapse", () => {
-        sidebarToggler.style.display = "none";
-    });
+            navbarCollapse.addEventListener("show.bs.collapse", () => {
+                sidebarToggler.style.display = "none";
+            });
 
-    navbarCollapse.addEventListener("hidden.bs.collapse", () => {
-        sidebarToggler.style.display = "block";
-    });
-});
-</script>
+            navbarCollapse.addEventListener("hidden.bs.collapse", () => {
+                sidebarToggler.style.display = "block";
+            });
+        });
+    </script>
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
         integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -510,6 +613,18 @@ document.addEventListener("DOMContentLoaded", () => {
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
         integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
         crossorigin="anonymous"></script>
+
+    <!-- Utils -->
+
+    <script src="../js/utils/balance.utils.js"></script>
+    <script src="../js/utils/sendmoney.utils.js"></script>
+    <script src="../js/utils/movements.utils.js"></script>
+
+    <!-- Controllers -->
+
+    <script src="../js/controllers/balance.controllers.js"></script>
+    <script src="../js/controllers/sendmoney.controllers.js"></script>
+    <script src="../js/controllers/movements.controllers.js"></script>
 
 </body>
 

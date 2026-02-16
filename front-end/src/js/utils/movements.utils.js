@@ -3,8 +3,10 @@ window.getMovements = function () {
     return movements ? JSON.parse(movements) : [];
 }
 
-window.saveMovement =  function (movement) {
-    const movements = getMovements;
-    movements.push(movement);
+window.saveMovement = function(movementData) {
+    const movements = getMovements();
+    movementData.amount = Number (movementData.amount);
+    movements.unshift(movementData);
     localStorage.setItem("userMovements", JSON.stringify(movements));
 }
+

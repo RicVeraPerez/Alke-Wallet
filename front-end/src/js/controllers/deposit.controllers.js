@@ -1,10 +1,7 @@
-
-
 $(document).ready(function () {
-    $("#deposit-form").on("submit", function (event) {
+    $(".deposit-form").on("submit", function (event) {
         event.preventDefault();
-
-        const depositAmount = $("#deposit-amount").val();
+        const depositAmount = Number($("#deposit-amount").val());
         const depositDescription = $("#deposit-description").val();
         
         const movement = {
@@ -17,10 +14,18 @@ $(document).ready(function () {
         }
 
 
-
+        alert("Depósito exitoso");
         updateBalance(depositAmount, "deposit");
         saveMovement(movement);
+        renderMovements();
         this.reset();
     });
 });
+
+
+
+
+
+
+
 

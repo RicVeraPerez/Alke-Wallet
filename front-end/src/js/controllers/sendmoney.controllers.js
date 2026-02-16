@@ -4,7 +4,7 @@ $(document).ready(function () {
     $("#send-money-form").on("submit", function (event) {
         event.preventDefault();
 
-        const transferAmount = $("transfer-amount").val();
+        const transferAmount = Number($("#transfer-amount").val());
         const transferRutReceiver = $("#transfer-rut-receiver").val();
         const transferDescription = $("#transfer-description").val();
 
@@ -17,8 +17,10 @@ $(document).ready(function () {
             counterparty: transferRutReceiver
         }
 
-        updateBalance(transferAmount, "withdraw")
+        alert("Transferencia exitosa");
+        updateBalance(transferAmount, "withdraw");
         saveMovement(movement);
+        renderMovements();
         this.reset();
     });
 });
